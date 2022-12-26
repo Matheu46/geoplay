@@ -1,0 +1,44 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.layout {
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.botao {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.selecionado {
+  background: green;
+}
+
+.selecionado img {
+  stroke: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  margin: 0 auto;
+  gap: 30px;
+  padding: 30px;
+}
+
+.card {
+  display: flez;
+  justify-content: center;
+  margin: 0 auto;
+}
+/* .card{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+} */
