@@ -43,6 +43,7 @@ const loadGame = () => {
   referencia.appendChild(
     createReferencia(shapes[Math.floor(Math.random() * shapes.length)]),
   );
+  // precisa checar se essa forma está no grid também (pelo menos dois)
 
   for (var i = 0; i < 9; i++) {
     grid.appendChild(
