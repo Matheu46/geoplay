@@ -25,6 +25,7 @@ var embla = EmblaCarousel(emblaNode, options, plugins);
 
 // Para iniciar o primeiro do slide
 circulo.play();
+circuloAudio.play(); //não toca pois não existem interações antes
 
 const onSelect = () => {
   const slideAtual = embla.selectedScrollSnap(); //Retorna a posição do slide atual

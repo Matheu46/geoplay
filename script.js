@@ -1,3 +1,5 @@
+//Script do seleção formas
+
 const grid = document.querySelector('.grid');
 const referencia = document.querySelector('#referencia');
 const shapes = ['quadrado', 'retangulo', 'triangulo', 'circulo'];
@@ -64,6 +66,9 @@ const createReferencia = (shape) => {
 function referenciaEscohida(formasGrid) {
   //Seleciona a raferência
   const referenciaForma = shapes[Math.floor(Math.random() * shapes.length)];
+  console.log(referenciaForma);
+
+  cardsCorretos = 0; //reiniciar para quando a função é chamada mais uma vez
 
   //conta quantas vezes a forma de referência aparece no grid
   // let contador = 0;
@@ -76,7 +81,6 @@ function referenciaEscohida(formasGrid) {
   //checa se existe pelo menos duas formas no grid igual a da referência
   if (cardsCorretos > 1) {
     referencia.appendChild(createReferencia(referenciaForma));
-    return;
   } else {
     //caso não a mesma função é chamada outra vez
     referenciaEscohida(formasGrid);
@@ -95,8 +99,6 @@ const loadGame = () => {
 
   //função responsável por escolher a forma de referência
   referenciaEscohida(formasGrid);
-
-  console.log();
 };
 
 loadGame();
