@@ -1,127 +1,60 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//   const pincel = {
-//     ativo: false,
-//     movendo: false,
-//     pos: { x: 0, y: 0 },
-//     posAnterior: null,
-//   };
-
-//   const canvas = document.querySelector('#canvas');
-//   const ctx = canvas.getContext('2d');
-
-//   // canvas.width = 700;
-//   // canvas.height = 500;
-//   canvas.width = window.innerWidth;
-//   canvas.height = window.innerHeight;
-
-//   const desenhar = (linha) => {
-//     ctx.beginPath();
-//     ctx.moveTo(linha.posAnterior.x, linha.posAnterior.y);
-//     ctx.lineTo(linha.pos.x, linha.pos.y);
-//     ctx.stroke();
-//   };
-
-//   canvas.onmousedown = (event) => {
-//     pincel.ativo = true;
-//     document.getElementById('info').style.display = 'none';
-//   };
-//   canvas.addEventListener('touchstart', function (event) {
-//     pincel.ativo = true;
-//     pincel.pos.x = event.touches[0].clientX;
-//     pincel.pos.y = event.touches[0].clientY;
-//     document.getElementById('info').style.display = 'none';
-//   });
-
-//   canvas.onmouseup = (event) => {
-//     pincel.ativo = false;
-//   };
-//   canvas.addEventListener('touchend', function (event) {
-//     pincel.ativo = false;
-//   });
-
-//   canvas.onmousemove = (event) => {
-//     if (pincel.ativo) {
-//       pincel.pos.x = event.clientX;
-//       pincel.pos.y = event.clientY;
-//       pincel.movendo = true;
-//     }
-//   };
-//   canvas.addEventListener('touchmove', function (event) {
-//     pincel.pos.x = event.touches[0].clientX;
-//     pincel.pos.y = event.touches[0].clientY;
-//     pincel.movendo = true;
-//   });
-
-//   const ciclo = () => {
-//     if (pincel.ativo && pincel.movendo) {
-//       desenhar({ pos: pincel.pos, posAnterior: pincel.posAnterior });
-//       pincel.movendo = false;
-//     }
-//     pincel.posAnterior = { x: pincel.pos.x, y: pincel.pos.y };
-
-//     setTimeout(ciclo, 10);
-//   };
-
-//   ciclo();
-// });
-
-// Obtém o elemento canvas e o contexto de desenho
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-
-// tamanho do canvas
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-// Variáveis para armazenar a posição atual do toque
-var x = 0;
-var y = 0;
-
-// Flag para indicar se o usuário está tocando o canvas
-var touchActive = false;
-
-// Adiciona o evento de toque no canvas
-canvas.addEventListener('touchstart', function (event) {
-  touchActive = true;
-  x = event.touches[0].clientX;
-  y = event.touches[0].clientY;
-  document.getElementById('info').style.display = 'none';
+const circulo = new Vivus('circulo', {
+  type: 'oneByOne',
+  start: 'manual',
 });
-canvas.onmousedown = (event) => {
-  touchActive = true;
-  x = event.clientX;
-  y = event.clientY;
-  document.getElementById('info').style.display = 'none';
-};
+const quadrado = new Vivus('quadrado', {
+  type: 'oneByOne',
+  start: 'manual',
+});
+const triangulo = new Vivus('triangulo', {
+  type: 'oneByOne',
+  start: 'manual',
+});
 
-// Adiciona o evento de movimento do toque no canvas
-canvas.addEventListener('touchmove', function (event) {
-  if (touchActive) {
-    // Desenha uma linha até a posição atual do toque
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    x = event.touches[0].clientX;
-    y = event.touches[0].clientY;
-    ctx.lineTo(x, y);
-    ctx.stroke();
+//Efeitos sonoros
+const circuloAudio = document.querySelector('.circulo-audio');
+const quadradoAudio = document.querySelector('.quadrado-audio');
+const trianguloAudio = document.querySelector('.triangulo-audio');
+
+// slide
+var emblaNode = document.querySelector('.embla');
+var options = { loop: true, align: 0.3 }; //para centralizar e ficar infinito
+var plugins = [EmblaCarouselAutoplay()]; // Plugins
+
+var embla = EmblaCarousel(emblaNode, options, plugins);
+
+// Para iniciar o primeiro do slide
+circulo.play();
+
+const onSelect = () => {
+  const slideAtual = embla.selectedScrollSnap(); //Retorna a posição do slide atual
+
+  if (slideAtual == 0) {
+    circulo.play();
+    circuloAudio.play();
+  } else {
+    circulo.reset();
   }
-});
-canvas.onmousemove = (event) => {
-  if (touchActive) {
-    // Desenha uma linha até a posição atual do toque
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    x = event.clientX;
-    y = event.clientY;
-    ctx.lineTo(x, y);
-    ctx.stroke();
+  if (slideAtual == 1) {
+    quadrado.play();
+    quadradoAudio.play();
+  } else {
+    quadrado.reset();
+  }
+  if (slideAtual == 2) {
+    triangulo.play();
+    trianguloAudio.play();
+  } else {
+    triangulo.reset();
   }
 };
 
-// Adiciona o evento de término do toque no canvas
-canvas.addEventListener('touchend', function (event) {
-  touchActive = false;
-});
-canvas.onmouseup = (event) => {
-  touchActive = false;
+embla.on('select', onSelect); // Add event listener
+
+const onSlideClick = () => {
+  console.log('teste');
 };
+
+embla.slideNodes().forEach((slideNode, index) => {
+  slideNode.addEventListener('drag', () => onSlideClick());
+});

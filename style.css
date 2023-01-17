@@ -1,26 +1,33 @@
+/* Página index */
 body {
   margin: 0px;
   padding: 0px;
+  height: 100vw;
 }
 
+#play-button {
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  border: solid;
+  display: block;
+  border-radius: 50%;
+  margin: 30vh auto;
+  cursor: pointer;
+
+}
+
+#play-button svg {
+  fill: black;
+}
+
+
+/* página selecaoFormas */
 .layout {
   padding: 20px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-}
-.botao {
-  background: #f2f2f2;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.selecionado {
-  background: green;
-}
-
-.selecionado img {
-  stroke: white;
 }
 
 .grid {
@@ -37,15 +44,21 @@ body {
 .card {
   display: flez;
   justify-content: center;
+  align-self: center;
   margin: 0 auto;
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  border: 5px solid #D1D1D1;
 }
 
 .card img{
   width: 100%;
   height: 100%;
 }
-/* .card{
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-} */
+
+.selecionado {
+  border: 5px solid #4E834D;
+  background: #F1F8F1;
+}
+

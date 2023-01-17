@@ -5,6 +5,13 @@ html, body {
   overflow: hidden;
 }
 
+body{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 canvas {
   cursor: crosshair; 
  }
@@ -22,4 +29,16 @@ span {
   color: #000;
   margin-top: -40px;
   margin-left: -200px;
+}
+
+/* Slide */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }
