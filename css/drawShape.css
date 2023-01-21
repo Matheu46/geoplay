@@ -6,29 +6,11 @@ html, body {
 }
 
 body{
+  background-image: url(../assets/background.jpg);
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-canvas {
-  cursor: crosshair; 
- }
-
-span:hover {
-  display: none;
-}
-
-span {
-  font-family: 'Georgia', cursive;
-  font-size: 40px;
-  position: fixed; 
-  top: 50%;
-  left: 50%;
-  color: #000;
-  margin-top: -40px;
-  margin-left: -200px;
 }
 
 /* Slide */
@@ -42,3 +24,15 @@ span {
   flex: 0 0 100%;
   min-width: 0;
 }
+
+/* .suporte{  
+  display: flex;
+  align-content: center;
+  background: white;
+}
+
+.suporte svg {
+  display: block;
+  background: green;
+} */
+

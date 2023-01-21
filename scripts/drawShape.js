@@ -1,3 +1,4 @@
+//animações
 const circulo = new Vivus('circulo', {
   type: 'oneByOne',
   start: 'manual',
@@ -10,6 +11,10 @@ const triangulo = new Vivus('triangulo', {
   type: 'oneByOne',
   start: 'manual',
 });
+const retangulo = new Vivus('retangulo', {
+  type: 'oneByOne',
+  start: 'manual',
+});
 
 //Efeitos sonoros
 const circuloAudio = document.querySelector('.circulo-audio');
@@ -18,7 +23,7 @@ const trianguloAudio = document.querySelector('.triangulo-audio');
 
 // slide
 var emblaNode = document.querySelector('.embla');
-var options = { loop: true, align: 0.3 }; //para centralizar e ficar infinito
+var options = { loop: true, align: 0.4 }; //para centralizar e ficar infinito
 var plugins = [EmblaCarouselAutoplay()]; // Plugins
 
 var embla = EmblaCarousel(emblaNode, options, plugins);
@@ -47,6 +52,12 @@ const onSelect = () => {
     trianguloAudio.play();
   } else {
     triangulo.reset();
+  }
+  if (slideAtual == 3) {
+    retangulo.play();
+    retanguloAudio.play();
+  } else {
+    retangulo.reset();
   }
 };
 
