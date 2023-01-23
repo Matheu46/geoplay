@@ -1,3 +1,9 @@
-<svg width="106" height="107" viewBox="0 0 106 107" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="1.5" y="1.49997" width="103" height="104" fill="#333333" stroke="black" stroke-width="3"/>
+<svg width="112" height="113" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill="url(#a)" stroke="#4E834D" stroke-width="3" d="M1.5 1.5h109v110H1.5z"/>
+  <defs>
+    <radialGradient id="a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 53.5 -53 0 56 56.5)">
+      <stop/>
+      <stop offset="1" stop-color="#343434"/>
+    </radialGradient>
+  </defs>
 </svg>

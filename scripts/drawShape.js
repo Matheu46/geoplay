@@ -20,6 +20,7 @@ const retangulo = new Vivus('retangulo', {
 const circuloAudio = document.querySelector('.circulo-audio');
 const quadradoAudio = document.querySelector('.quadrado-audio');
 const trianguloAudio = document.querySelector('.triangulo-audio');
+const retanguloAudio = document.querySelector('.retangulo-audio');
 
 // slide
 var emblaNode = document.querySelector('.embla');
