@@ -7,17 +7,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GeoPlay - Jogos</title>
   <style>
+    html,
     body {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      align-items: center;
-      gap: 20px;
-      height: 500px;
-      margin: 0px 50px;
+      height: 100%;
     }
 
-    div {
-      background: #333;
+    body {
+      background-image: url(assets/background.jpg);
+      display: grid;
+      grid-template-rows: 300px;
+      margin: 0px 20px;
+    }
+
+    .voltar {
+      margin-top: 20px;
+      position: absolute;
+    }
+
+    .conteudo {
+      align-self: start;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: top;
+      gap: 20px;
+    }
+
+    .miniatura {
+      padding: 0px;
+      margin: 0px;
+      display: grid;
+      justify-content: center;
       min-width: 100px;
     }
 
@@ -30,9 +49,14 @@
 </head>
 
 <body>
-  <div><a href="drawShape.html">1</a></div>
-  <div><a href="selecaoFormas.html">2</a></div>
-  <div><a href="drag-drop2.html">3</a></div>
+  <a href="index.html">
+    <img class="voltar" src="assets/toBack.svg" alt="">
+  </a>
+  <div class="conteudo">
+    <div class='miniatura'><a href="drawShape.html"><img src="assets/jogo1.svg" alt=""></a></div>
+    <div class='miniatura'><a href="selecaoFormas.html"><img src="assets/jogo2.svg" alt=""></a></div>
+    <div class='miniatura'><a href="drag-drop2.html"><img src="assets/jogo3.svg" alt=""></a></div>
+  </div>
 </body>
 
 </html>

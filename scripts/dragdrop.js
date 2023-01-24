@@ -3,13 +3,19 @@ const forma = document.querySelector('.forma');
 
 const shapes = ['quadrado', 'triangulo', 'circulo'];
 
+const corretoAudio = document.querySelector('.audio-acerto');
+const erradoAudio = document.querySelector('.audio-erro');
+
 //Escolher qual vai ser a peça a ser movida
 const escolherPeca = (shapes) => {
   const pecaEscolhida = shapes[Math.floor(Math.random() * shapes.length)];
+
+  //checar se não era a mesma da anterior
   if (pecaEscolhida === forma.classList[1]) {
     escolherPeca(shapes);
+  } else {
+    criarPeca(pecaEscolhida);
   }
-  criarPeca(pecaEscolhida);
   return;
 };
 
@@ -17,7 +23,7 @@ const escolherPeca = (shapes) => {
 const criarPeca = (pecaEscolhida) => {
   const imagem = document.createElement('img');
 
-  imagem.src = `../img/${pecaEscolhida}-peca.svg`;
+  imagem.src = `/../img/${pecaEscolhida}-peca.svg`;
   imagem.draggable = true;
   forma.appendChild(imagem);
   forma.classList.add(pecaEscolhida);
@@ -55,6 +61,7 @@ function drag(evt) {
 }
 
 function drop() {
+  const objeto = el;
   drops.forEach((dropzone) => {
     if (dropzone.className.includes(forma.classList[1])) {
       var drp = dropzone.getBoundingClientRect();
@@ -67,14 +74,15 @@ function drop() {
       if (avail == 'available') {
         if (drpT < drgT && drpL < drgL && drpB > drgB && drpR > drgR) {
           // dropzone.appendChild(el);
-
-          // el.style.position = '';
+          corretoAudio.play();
+          el.style.position = '';
           el.setAttribute('draggable', 'false');
+
           forma.removeChild(el);
           escolherPeca(shapes);
           forma.classList.remove(forma.classList[1]);
         } else if (el.draggable) {
-          console.log('entrou');
+          erradoAudio.play();
           forma.appendChild(el);
           el.style.position = '';
           forma.classList.add('float');

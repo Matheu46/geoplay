@@ -13,10 +13,19 @@ let cardsCorretos = 0;
 
 function ganhou() {
   if (cardsCorretos == qtdSelecionadas) {
-    alert('Ganhou');
+    resetGame();
+    loadGame();
   } else {
     return false;
   }
+}
+
+//apaga os elementos criados e reinicia as variáveis de controle
+function resetGame() {
+  qtdSelecionadas = 0;
+  cardsCorretos = 0;
+  grid.innerText = '';
+  referencia.innerText = '';
 }
 
 //sempre que o usuário aperta em uma forma do grid
