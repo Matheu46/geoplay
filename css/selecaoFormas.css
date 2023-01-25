@@ -39,6 +39,30 @@ body {
   align-items: center;
   /* background: red; */
 }
+.sair-animacao{
+  animation: sair 1s ease-in-out;
+}
+.entrar-animacao{
+  animation: entrar 1s ease-in-out;
+}
+
+@keyframes sair{
+  0% {
+    transform: translatey(0px);
+  }
+  100% {
+    transform: translatey(1000px);
+  }
+}
+
+@keyframes entrar{
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
 .card {
   display: flez;

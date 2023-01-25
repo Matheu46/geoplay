@@ -13,6 +13,7 @@ let cardsCorretos = 0;
 
 function ganhou() {
   if (cardsCorretos == qtdSelecionadas) {
+    grid.classList.remove('entrar-animacao');
     resetGame();
     loadGame();
   } else {
@@ -108,6 +109,10 @@ const loadGame = () => {
 
   //função responsável por escolher a forma de referência
   referenciaEscohida(formasGrid);
+  grid.classList.add('entrar-animacao');
+  setTimeout(() => {
+    grid.classList.remove('entrar-animacao');
+  }, 1000);
 };
 
 loadGame();

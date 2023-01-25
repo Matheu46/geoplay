@@ -23,7 +23,7 @@ const escolherPeca = (shapes) => {
 const criarPeca = (pecaEscolhida) => {
   const imagem = document.createElement('img');
 
-  imagem.src = `/../img/${pecaEscolhida}-peca.svg`;
+  imagem.src = `img/${pecaEscolhida}-peca.svg`;
   imagem.draggable = true;
   forma.appendChild(imagem);
   forma.classList.add(pecaEscolhida);
