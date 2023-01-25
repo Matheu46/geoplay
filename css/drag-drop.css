@@ -3,7 +3,7 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 body {
@@ -37,14 +37,9 @@ body {
   padding: 30px;
 }
 
-.em-cima img {
-  width: calc(30px + 100%);
-}
-
 .forma {
   align-self: baseline;
   display: flex;
-
 }
 
 .float {
@@ -60,14 +55,28 @@ body {
   }
 }
 
-.sumir {
-  opacity: 0;
-}
-
-.desaparecer {
-  opacity: 0;
-}
 
 .forma img {
   margin: 0 auto;
+}
+
+@media (max-height: 500px) {
+  .voltar {
+    width: 50px;
+    margin: 10px;
+  }
+  .drops {
+    gap: 50px;
+    margin: 0px auto;
+    margin-bottom: 0px;
+  }
+  .dropzone img{
+    width: 90px;
+  }
+  .forma img{
+    width: 90px;
+  }
+  .triangulo img{
+    width: 100px;
+  }
 }

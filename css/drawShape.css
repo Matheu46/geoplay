@@ -33,14 +33,10 @@ body{
   min-width: 0;
 }
 
-/* .suporte{  
-  display: flex;
-  align-content: center;
-  background: white;
+@media (max-height: 500px) {
+  .voltar {
+    width: 50px;
+    margin: 10px;
+  }
 }
-
-.suporte svg {
-  display: block;
-  background: green;
-} */
 
