@@ -28,6 +28,7 @@ const criarPeca = (pecaEscolhida) => {
   forma.appendChild(imagem);
   forma.classList.add(pecaEscolhida);
 
+  forma.classList.add('float');
   return;
 };
 

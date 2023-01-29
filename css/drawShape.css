@@ -27,10 +27,47 @@ body{
 }
 .embla__container {
   display: flex;
+  align-items: center;
 }
 .embla__slide {
+  /* background: url(../assets/beach-ball.svg) center left no-repeat; */
   flex: 0 0 100%;
-  min-width: 0;
+  max-width: 800px;
+
+}
+.forma {
+  opacity: .8;
+  display: absolute;
+}
+.objeto{
+  display: block;
+}
+
+#circuloLupa {
+  margin-left: 4px;
+  margin-bottom: 4px;
+}
+
+#quadradoAlmofada{
+  margin-left: 45px;
+}
+
+#triangulo {
+  margin-bottom: 20px;
+  padding: 40px 0;
+}
+#trianguloCabide{
+  padding-top: 80px;
+}
+#trianguloPizza {
+  margin-bottom: 35px;
+}
+
+#retanguloTV{
+  margin-top: 15px;
+}
+#retanguloChocolate{
+  margin-left: -10px ;
 }
 
 @media (max-height: 500px) {
