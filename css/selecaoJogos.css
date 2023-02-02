@@ -1,0 +1,59 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url(../assets/interface/background.jpg);
+  display: grid;
+  grid-template-rows: 300px;
+  margin: 0px 20px;
+}
+
+.voltar {
+  margin-top: 20px;
+  position: absolute;
+}
+
+.conteudo {
+  align-self: start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: top;
+  gap: 20px;
+}
+
+.miniatura {
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+  justify-content: center;
+  min-width: 100px;
+  transform: translatey(0px);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(-5px);
+  }
+}
+
+@media (max-height: 500px) {
+  body {
+    grid-template-rows: 120px;
+  }
+
+  .voltar {
+    width: 50px;
+    margin: 10px;
+  }
+
+  .miniatura img {
+    width: 200px;
+  }
+}

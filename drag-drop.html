@@ -1,33 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drag-drop</title>
+  <title>GeoPlay</title>
   <link rel="stylesheet" href="css/drag-drop.css">
 </head>
 
-<body>
-  <div class="drops">
-    <div class="dropzone circulo">
-      <img class="" src="img/circulo.svg" alt="">
+<body ontouchstart="dragStart(event)" ontouchmove="drag(event)" ontouchend="drop(event)">
+  <a href="selecaoJogos.html">
+    <img class="voltar" src="assets/interface/toBack.svg" alt="">
+  </a>
+  <div class="conteudo">
+    <div class="drops">
+      <div class="dropzone circulo">
+        <img class="" src="img/circulo.svg" alt="">
+      </div>
+      <div class="dropzone quadrado">
+        <img class="" src="img/quadrado.svg" alt="">
+      </div>
+      <div class="dropzone triangulo">
+        <img class="" src="img/triangulo.svg" alt="">
+      </div>
     </div>
-    <div class="dropzone quadrado">
-      <img class="" src="img/quadrado.svg" alt="">
-    </div>
-    <div class="dropzone triangulo">
-      <img class="" src="img/triangulo.svg" alt="">
+
+    <div class="forma float">
+
     </div>
   </div>
 
-  <div class="circulo">
-    <img class="forma" src="img/circulo-azul.svg" alt="" draggable="true">
-  </div>
+  <audio class="audio-acerto" src="assets/audio/correct.mp3"></audio>
+  <audio class="audio-erro" src="assets/audio/error.wav"></audio>
 
-  <script src="dragDrop.js"></script>
-
+  <script src="scripts/dragdrop.js"></script>
 </body>
 
 </html>

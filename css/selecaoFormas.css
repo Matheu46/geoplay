@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-  background-image: url(../assets/background.jpg);
+  background-image: url(../assets/interface/background.jpg);
   display: grid;
   grid-template-rows: 5% 15% 80%;
 }

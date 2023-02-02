@@ -71,7 +71,7 @@ var embla = EmblaCarousel(emblaNode, options, plugins);
 // Para iniciar o primeiro do slide
 circulo.play();
 circuloAudio.play(); //não toca pois não existem interações antes
-slide[0].style.backgroundImage = "url('assets/beach-ball.svg')";
+slide[0].style.backgroundImage = "url('assets/objetos/beach-ball.svg')";
 slide[0].style.backgroundPosition = 'center left';
 slide[0].style.backgroundRepeat = 'no-repeat';
 
@@ -80,7 +80,8 @@ const onSelect = () => {
 
   if (slideAtual == 0) {
     circuloAudio.load();
-    slide[slideAtual].style.backgroundImage = "url('assets/beach-ball.svg')";
+    slide[slideAtual].style.backgroundImage =
+      "url('assets/objetos/beach-ball.svg')";
     slide[slideAtual].style.backgroundPosition = 'center left';
     slide[slideAtual].style.backgroundRepeat = 'no-repeat';
 
@@ -91,7 +92,8 @@ const onSelect = () => {
   }
   if (slideAtual == 1) {
     quadradoAudio.load();
-    slide[slideAtual].style.backgroundImage = "url('assets/tabuleiro.svg')";
+    slide[slideAtual].style.backgroundImage =
+      "url('assets/objetos/tabuleiro.svg')";
     slide[slideAtual].style.backgroundPosition = 'center left';
     slide[slideAtual].style.backgroundRepeat = 'no-repeat';
 
@@ -103,7 +105,7 @@ const onSelect = () => {
   if (slideAtual == 2) {
     trianguloAudio.load();
     slide[slideAtual].style.backgroundImage =
-      "url('assets/trianguloInstrumento.svg')";
+      "url('assets/objetos/trianguloInstrumento.svg')";
     slide[slideAtual].style.backgroundPosition = 'center left';
     slide[slideAtual].style.backgroundRepeat = 'no-repeat';
 
@@ -114,7 +116,8 @@ const onSelect = () => {
   }
   if (slideAtual == 3) {
     retanguloAudio.load();
-    slide[slideAtual].style.backgroundImage = "url('assets/tv-retro.svg')";
+    slide[slideAtual].style.backgroundImage =
+      "url('assets/objetos/tv-retro.svg')";
     slide[slideAtual].style.backgroundPosition = 'center left';
     slide[slideAtual].style.backgroundRepeat = 'no-repeat';
 
@@ -126,7 +129,7 @@ const onSelect = () => {
 
   if (slideAtual == 4) {
     circuloAudio.load();
-    slide[slideAtual].style.backgroundImage = "url('assets/earth.svg')";
+    slide[slideAtual].style.backgroundImage = "url('assets/objetos/earth.svg')";
     slide[slideAtual].style.backgroundPosition = 'center left';
     slide[slideAtual].style.backgroundRepeat = 'no-repeat';
 
@@ -137,7 +140,8 @@ const onSelect = () => {
   }
   if (slideAtual == 5) {
     quadradoAudio.load();
-    slide[slideAtual].style.backgroundImage = "url('assets/almofada.svg')";
+    slide[slideAtual].style.backgroundImage =
+      "url('assets/objetos/almofada.svg')";
     slide[slideAtual].style.backgroundPosition = 'center left';
     slide[slideAtual].style.backgroundRepeat = 'no-repeat';
 
@@ -148,7 +152,8 @@ const onSelect = () => {
   }
   if (slideAtual == 6) {
     trianguloAudio.load();
-    slide[slideAtual].style.backgroundImage = "url('assets/cabide.svg')";
+    slide[slideAtual].style.backgroundImage =
+      "url('assets/objetos/cabide.svg')";
     slide[slideAtual].style.backgroundPosition = 'bottom left';
     slide[slideAtual].style.backgroundRepeat = 'no-repeat';
 
@@ -159,7 +164,8 @@ const onSelect = () => {
   }
   if (slideAtual == 7) {
     retanguloAudio.load();
-    slide[slideAtual].style.backgroundImage = "url('assets/janela.svg')";
+    slide[slideAtual].style.backgroundImage =
+      "url('assets/objetos/janela.svg')";
     slide[slideAtual].style.backgroundPosition = 'center left';
     slide[slideAtual].style.backgroundRepeat = 'no-repeat';
 
@@ -171,7 +177,7 @@ const onSelect = () => {
 
   if (slideAtual == 8) {
     circuloAudio.load();
-    slide[slideAtual].style.backgroundImage = "url('assets/lupa.svg')";
+    slide[slideAtual].style.backgroundImage = "url('assets/objetos/lupa.svg')";
     slide[slideAtual].style.backgroundPosition = 'top left';
     slide[slideAtual].style.backgroundRepeat = 'no-repeat';
     slide[slideAtual].style.backgroundSize = 'contain';
@@ -183,7 +189,8 @@ const onSelect = () => {
   }
   if (slideAtual == 9) {
     quadradoAudio.load();
-    slide[slideAtual].style.backgroundImage = "url('assets/biscoito.svg')";
+    slide[slideAtual].style.backgroundImage =
+      "url('assets/objetos/biscoito.svg')";
     slide[slideAtual].style.backgroundPosition = 'center left';
     slide[slideAtual].style.backgroundRepeat = 'no-repeat';
 
@@ -194,7 +201,7 @@ const onSelect = () => {
   }
   if (slideAtual == 10) {
     trianguloAudio.load();
-    slide[slideAtual].style.backgroundImage = "url('assets/pizza.svg')";
+    slide[slideAtual].style.backgroundImage = "url('assets/objetos/pizza.svg')";
     slide[slideAtual].style.backgroundPosition = 'center left';
     slide[slideAtual].style.backgroundRepeat = 'no-repeat';
 
@@ -205,7 +212,8 @@ const onSelect = () => {
   }
   if (slideAtual == 11) {
     retanguloAudio.load();
-    slide[slideAtual].style.backgroundImage = "url('assets/chocolate.svg')";
+    slide[slideAtual].style.backgroundImage =
+      "url('assets/objetos/chocolate.svg')";
     slide[slideAtual].style.backgroundPosition = 'center left';
     slide[slideAtual].style.backgroundRepeat = 'no-repeat';
 
